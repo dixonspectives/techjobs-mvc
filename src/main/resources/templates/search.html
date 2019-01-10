@@ -35,10 +35,14 @@
     </form>
 
     <hr />
+    <div class="error" th:if="${error}">
+       <p th:text="${error}"></p>
+    </div>
 
-    <!-- TODO #2 - Loop over jobs map to display all job fields -->
+<div th:replace="fragments :: job-list"></div>
 
 </div>
+
 
 </body>
 </html>

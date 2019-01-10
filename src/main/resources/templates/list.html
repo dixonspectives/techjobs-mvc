@@ -6,7 +6,7 @@
 
     <div th:replace="fragments :: page-header"></div>
 
-    <div class="container body-content">
+    <div th:fragment="job-listing" class="container body-content">
         <h1 th:text="${#strings.capitalizeWords(title)}"></h1>
         <h2>View All</h2>
         <ul>

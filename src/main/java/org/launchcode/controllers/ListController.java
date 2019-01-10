@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Created by LaunchCode
@@ -41,6 +42,8 @@ public class ListController {
             ArrayList<HashMap<String, String>> jobs = JobData.findAll();
             model.addAttribute("title", "All Jobs");
             model.addAttribute("jobs", jobs);
+
+
             return "list-jobs";
         } else {
             ArrayList<String> items = JobData.findAll(column);
